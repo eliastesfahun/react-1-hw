@@ -1,0 +1,40 @@
+# Query: TASK - React 1 week 1
+# ContextLines: 1
+
+8 results - 4 files
+
+README.md:
+  32  
+  33: - Tasks for week1: `TASK - React 1 week 1`
+  34  - Tasks for week2: `TASK - React 1 week 2`
+
+app/layout.js:
+  19          {children}
+  20:         {/* TASK - React 1 week 1 */}
+  21          {/* Import and use the Footer component here */}
+
+app/about_us/page.js:
+   2  
+   3: // TASK - React 1 week 1
+   4  // After you are finished with creating the page, move the OurValues, OurCrew, OurPartners components into their own files
+
+   8  const OurValues = () => {
+   9:   // TASK - React 1 week 1
+  10    // Create the "Our Values" section
+
+  18  const OurCrew = () => {
+  19:   // TASK - React 1 week 1
+  20    // Create the "Our Crew section"
+
+  29  const OurPartners = () => {
+  30:   // TASK - React 1 week 1
+  31    // Create the "Our Crew section"
+
+  54  
+  55:          {/* TASK - React 1 week 1 */}
+  56           {/* Add in the "OurPartners" component here */}
+
+components/ui/Footer.js:
+  26  
+  27:       {/* TASK - React 1 week 1 */}
+  28        {/* Add a new list item for LINKEDIN */}

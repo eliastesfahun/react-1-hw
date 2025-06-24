@@ -1,53 +1,78 @@
-"use client"
+import React from "react";
+import Link from "next/link";
+import styles from "./Footer.module.css"; // Import the CSS module
 
-import { usePathname } from 'next/navigation';
-import styles from './Footer.module.css';
-
-export const Footer = () => {
-  const path = usePathname().split('?')[0];
+const Footer = () => {
   return (
-    <footer className={path !== "/" ? styles.footer : styles.hidden}>
-      <div className={styles.footerDescription}>
-        <h3>Galactica</h3>
-        <p>Explore the universe and beyond. Your journey to the stars starts here.</p>
-        <p>&copy; 2024 Galactica. All rights reserved.</p>
-      </div>
-      {/* TASK - React 1 week 2 */}
-      {/* Create a new List for the Pages */}
-      {/* We need to use the <Link /> component here */}
-      {/* <div className={styles.pages}>
-        <h3>Pages</h3>
-        <ul>
-          <li> <Link/> </li>
-          ...
-        </ul>
-      </div> */}
-      {/* Docs for the Link: https://nextjs.org/docs/pages/api-reference/components/link */}
+    <footer className={styles.footerContainer}>
+      <div className={styles.footerContent}>
+        {/* Company Info */}
+        <div className={styles.companyInfo}>
+          <h3 className={styles.companyTitle}>MyCompany, Inc.</h3>
+          <p className={styles.companyText}>
+            123 React Lane, Component City, RC 12345
+          </p>
+          <p className={styles.companyText}>Email: info@mycompany.com</p>
+          <p className={styles.companyText}>Phone: (123) 456-7890</p>
+        </div>
 
-      {/* TASK - React 1 week 1 */}
-      {/* Add a new list item for LINKEDIN */}
-      <div className={styles.footerLinks}>
-        <h3>Follow us</h3>
-        <ul className={styles.footerList}>
-          <li>
-            <a href="https://facebook.com">Facebook</a>
-          </li>
-          <li>
-            <a href="https://instagram.com">Instagram</a>
-          </li>
-          <li>
-            <a href="https://tiktok.com">Tiktok</a>
-          </li>
-          <li>
-            <a href="https://google.com">On the streets at night</a>
-          </li>
-          {/* TASK - React 1 week 2 */}
-          {/* Create a <SocialMediaItem /> component and replace all of the list items! */}
-          {/* it should accept the following props */}
-          {/* url, title, icon */}
-          {/* For the icons, you can download 1-2 social media icons for testing and put it in the /public/socialmedia/ folder */}
-        </ul>
+        {/* Navigation Links */}
+        <nav className={styles.navbarNav}>
+          <ul className={styles.navList}>
+            <li>
+              <Link href="/" className={styles.navLink}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/about_us" className={styles.navLink}>
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link href="/services" className={styles.navLink}>
+                Services
+              </Link>
+            </li>
+            <li>
+              <Link href="/contact" className={styles.navLink}>
+                Contact
+              </Link>
+            </li>
+            {/* TASK - React 1 week 1 */}
+            {/* Add a new list item for LINKEDIN */}
+            <li>
+              <a
+                href="https://www.linkedin.com/company/hackyourfuturebelgium/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.navLink}
+              >
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        {/* Social Media / Copyright */}
+        <div className={styles.socialCopyright}>
+          <p>
+            &copy; {new Date().getFullYear()} MyCompany, Inc. All rights
+            reserved.
+          </p>
+          <div className={styles.socialLinks}>
+            {/* Replace with actual social media icons/links if available */}
+            <a href="#" className={styles.socialLink}>
+              Facebook
+            </a>
+            <a href="#" className={styles.socialLink}>
+              Twitter
+            </a>
+          </div>
+        </div>
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;
